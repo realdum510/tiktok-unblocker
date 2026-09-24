@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>TikTok - ByteShed</title>
+<link rel="stylesheet" href="index.css" />
+<script src="baremux/index.js"></script>
+<script src="uv/uv.bundle.js"></script>
+<script src="uv/uv.config.js"></script>
+</head>
+<body>
+<div class="wrap">
+  <div class="logo">ByteShed <span>TikTok</span></div>
+  <p class="sub">School-safe viewer. Runs over HTTPS (443), no weird ports.</p>
+  <form id="uv-form">
+    <input id="uv-search-engine" value="https://www.google.com/search?q=%s" type="hidden" />
+    <input id="uv-address" type="text" value="https://www.tiktok.com/" />
+    <button type="submit">Go</button>
+  </form>
+  <div class="row">
+    <button id="btn-tiktok" type="button">Open TikTok</button>
+    <button id="btn-blank" type="button" title="Opens in about:blank (hides URL from filters)">Cloak tab</button>
+  </div>
+  <p id="uv-error"></p>
+  <pre id="uv-error-code"></pre>
+</div>
+<iframe id="uv-frame" title="TikTok"></iframe>
+<script src="register-sw.js"></script>
+<script src="search.js"></script>
+<script src="index.js"></script>
+</body>
+</html>
